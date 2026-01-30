@@ -1,0 +1,20 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+const KEY = "@zsthought:bookmarks";
+
+export async function getBookmarks() {
+  try {
+    const raw = await AsyncStorage.getItem(KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function saveBookmarks(items: any[]) {
+  try {
+    await AsyncStorage.setItem(KEY, JSON.stringify(items));
+  } catch {
+    // ignore for now
+  }
+}
