@@ -1,0 +1,48 @@
+# Z_S Thought
+
+Z_S Thought is a mobile application delivering thoughtful content and digital ideas through a clean, accessible interface. The app represents the SDPZ brand and uses the S_BD logo with a focus on simplicity and clarity.
+
+## Project Overview
+- App name: Z_S Thought
+- Brand: SDPZ
+- Logo: S_BD
+- Location: Khulna Division, Bangladesh
+- Contact:
+  - Phone: +8801763145065
+  - WhatsApp: +8801791424639
+
+## Objectives
+- Develop a modern, responsive mobile app
+- Establish a strong brand presence using S_BD
+- Provide an intuitive, accessible user experience
+- Build a maintainable codebase ready for future expansion (web/admin)
+
+## MVP Features
+- Home feed with curated thoughtful content (cards)
+- Bookmark / favorites
+- Categories / tags
+- Simple profile (name, location, contact)
+- Settings (font size, dark mode)
+- Contact/Support screen
+
+## Recommended Tech Stacks (choose one)
+- React Native + Expo + TypeScript — fastest to prototype, great cross-platform support
+- Flutter — single codebase, high-performance UI, strong for custom design
+- Native (Kotlin + Swift) — best platform-specific performance, longer dev time
+
+## Getting Started (example for Expo + React Native)
+1. Install Node.js and Yarn/npm
+2. Install Expo CLI: `npm install -g expo-cli`
+3. Initialize project: `expo init z_s_thought` (choose blank TypeScript)
+4. Add navigation, async storage, theming libs:
+   - `yarn add @react-navigation/native @react-navigation/native-stack`
+   - `expo install react-native-screens react-native-safe-area-context`
+   - `yarn add @react-native-async-storage/async-storage`
+5. Replace README, add Brand assets (logo SVG/PNG), and start implementing screens.
+
+## Next Steps
+1. Choose tech stack and confirm target platforms.
+2. Provide logo assets (SVG preferred) and brand colors.
+3. I can scaffold the repo and implement the first screens (Home, Detail, Profile, Settings).
+
+If you want, I can scaffold an Expo + TypeScript starter now — tell me and I’ll generate the repo layout and initial files.
