@@ -1,0 +1,21 @@
+import React from "react";
+import { View, Text, ScrollView, Button } from "react-native";
+import { sampleData } from "../services/sampleData";
+
+export default function ArticleScreen({ route }: any) {
+  const { id } = route.params;
+  const article = sampleData.find((a) => a.id === id);
+
+  if (!article) return <View style={{ padding: 16 }}><Text>Article not found</Text></View>;
+
+  return (
+    <ScrollView style={{ padding: 16 }}>
+      <Text style={{ fontSize: 22, fontWeight: "700", marginBottom: 8 }}>{article.title}</Text>
+      <Text style={{ color: "#6B7280", marginBottom: 12 }}>{article.author} · {article.createdAt}</Text>
+      <Text style={{ fontSize: 16, lineHeight: 24 }}>{article.content}</Text>
+      <View style={{ marginTop: 20 }}>
+        <Button title="Bookmark (placeholder)" onPress={() => { /* hook into bookmarks store */ }} />
+      </View>
+    </ScrollView>
+  );
+}
