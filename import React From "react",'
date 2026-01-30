@@ -1,0 +1,52 @@
+import React from "react";
+import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
+
+type Props = {
+  title: string;
+  excerpt?: string;
+  category?: string;
+  onPress?: () => void;
+};
+
+export default function ContentCard({ title, excerpt, category, onPress }: Props) {
+  return (
+    <TouchableOpacity onPress={onPress} style={styles.card}>
+      <View style={styles.headerRow}>
+        <Text style={styles.category}>{category || "Idea"}</Text>
+      </View>
+      <Text style={styles.title}>{title}</Text>
+      {excerpt ? <Text style={styles.excerpt}>{excerpt}</Text> : null}
+    </TouchableOpacity>
+  );
+}
+
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: "#fff",
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 12,
+    shadowColor: "#000",
+    shadowOpacity: 0.05,
+    shadowRadius: 6,
+    elevation: 2
+  },
+  headerRow: {
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  category: {
+    fontSize: 12,
+    color: "#00BFA6",
+    fontWeight: "700"
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: "700",
+    marginTop: 6
+  },
+  excerpt: {
+    marginTop: 8,
+    color: "#6B7280"
+  }
+});
