@@ -1,0 +1,33 @@
+import React, { useEffect, useState } from "react";
+import { View, FlatList, Text } from "react-native";
+import ContentCard from "../components/ContentCard";
+import { getBookmarks } from "../store/bookmarks";
+
+export default function BookmarksScreen({ navigation }: any) {
+  const [bookmarks, setBookmarks] = useState<any[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const data = await getBookmarks();
+      setBookmarks(data);
+    })();
+  }, []);
+
+  if (!bookmarks.length) return <View style={{ padding: 16 }}><Text>No bookmarks yet.</Text></View>;
+
+  return (
+    <FlatList
+      data={bookmarks}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => (
+        <ContentCard
+          title={item.title}
+          excerpt={item.excerpt}
+          category={item.category}
+          onPress={() => navigation.navigate("Article", { id: item.id })}
+        />
+      )}
+      contentContainerStyle={{ padding: 16 }}
+    />
+  );
+}
