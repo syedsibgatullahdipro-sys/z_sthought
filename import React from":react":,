@@ -1,0 +1,15 @@
+import React from "react";
+import { View, Text, Switch } from "react-native";
+
+export default function SettingsScreen() {
+  // Placeholder for theme and font size toggles
+  return (
+    <View style={{ flex: 1, padding: 16 }}>
+      <Text style={{ marginBottom: 12, fontWeight: "600" }}>Settings</Text>
+      <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8 }}>
+        <Text>Dark Mode</Text>
+        <Switch value={false} onValueChange={() => {}} />
+      </View>
+    </View>
+  );
+}
