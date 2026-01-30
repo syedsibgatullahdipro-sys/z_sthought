@@ -1,0 +1,21 @@
+# Z_S Thought
+
+Z_S Thought — mobile app delivering thoughtful content and short-form digital ideas.
+
+Brand: SDPZ  
+Logo: S_BD
+
+Contact:
+- Phone: +8801763145065
+- WhatsApp: +8801791424639
+- Location: Khulna Division, Bangladesh
+
+Quick start (Expo + TypeScript)
+1. Install Node.js (16+) and Yarn or npm
+2. Install Expo CLI: `npm install -g expo-cli`
+3. From project root:
+   - `yarn` or `npm install`
+   - `expo start`
+4. Open on device with Expo Go or build native bundles with EAS
+
+If you want me to push this scaffold to a GitHub repo, create an empty repo and give me the owner/repo name and I will push the files there.
